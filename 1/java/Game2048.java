@@ -10,53 +10,54 @@ public class Game2048 {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        boolean play = true;
+        try (Scanner sc = new Scanner(System.in)) {
+            boolean play = true;
 
-        while (play) {
+            while (play) {
 
-            initGame();
+                initGame();
 
-            while (true) {
+                while (true) {
 
-                printField();
+                    printField();
 
-                if (!canMove()) {
-                    System.out.println("Гра завершена! Нема можливих ходiв.");
-                    break;
+                    if (!canMove()) {
+                        System.out.println("Гра завершена! Нема можливих ходiв.");
+                        break;
+                    }
+
+                    System.out.println("Введiть хiд (W-вгору, S-вниз, A-влiво, D-вправо, Q-вихiд):");
+                    char move = sc.next().toUpperCase().charAt(0);
+
+                    boolean moved = false;
+
+                    if (move == 'A')
+                        moved = moveLeft();
+                    if (move == 'D')
+                        moved = moveRight();
+                    if (move == 'W')
+                        moved = moveUp();
+                    if (move == 'S')
+                        moved = moveDown();
+                    if (move == 'Q')
+                        return;
+
+                    if (moved) {
+                        addRandomNumber();
+                    }
                 }
 
-                System.out.println("Введiть хiд (W-вгору, S-вниз, A-влiво, D-вправо, Q-вихiд):");
-                char move = sc.next().toUpperCase().charAt(0);
-
-                boolean moved = false;
-
-                if (move == 'A')
-                    moved = moveLeft();
-                if (move == 'D')
-                    moved = moveRight();
-                if (move == 'W')
-                    moved = moveUp();
-                if (move == 'S')
-                    moved = moveDown();
-                if (move == 'Q')
-                    return;
-
-                if (moved) {
-                    addRandomNumber();
+                if (score > bestScore) {
+                    bestScore = score;
                 }
-            }
 
-            if (score > bestScore) {
-                bestScore = score;
-            }
+                System.out.println("Ваш рахунок: " + score);
+                System.out.println("Найкращий рахунок: " + bestScore);
+                System.out.println("Почати нову гру? (Y/N)");
 
-            System.out.println("Ваш рахунок: " + score);
-            System.out.println("Найкращий рахунок: " + bestScore);
-            System.out.println("Почати нову гру? (Y/N)");
-
-            if (!sc.next().equalsIgnoreCase("Y")) {
-                play = false;
+                if (!sc.next().equalsIgnoreCase("Y")) {
+                    play = false;
+                }
             }
         }
     }
