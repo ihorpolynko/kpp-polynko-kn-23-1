@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ПІБ" />
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Вік"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бажана зарплата:" />
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3000 USD" />
+
+        <SeekBar
+            android:id="@+id/seekSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Question 1 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Що порівнює equals()?" />
+
+        <RadioGroup
+            android:id="@+id/rg1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Значення" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Посилання" />
+        </RadioGroup>
+
+        <!-- Question 2 -->
+
+        <TextView
+            android:text="2. Що таке Garbage Collection?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/rg2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Очищення пам’яті"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="База даних"/>
+        </RadioGroup>
+
+        <!-- Question 3 -->
+
+        <TextView
+            android:text="3. Для чого try-catch?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/rg3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Для обробки винятків"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Для циклів"/>
+        </RadioGroup>
+
+        <!-- Question 4 -->
+
+        <TextView
+            android:text="4. Static метод?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/rg4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Належить класу"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Належить об’єкту"/>
+        </RadioGroup>
+
+        <!-- Question 5 -->
+
+        <TextView
+            android:text="5. ArrayList vs LinkedList?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/rg5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ArrayList — масив"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LinkedList без індексів"/>
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cbExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Досвід роботи від 2 років"/>
+
+        <CheckBox
+            android:id="@+id/cbTeamwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Навички командної роботи"/>
+
+        <CheckBox
+            android:id="@+id/cbTrips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Готовність до відряджень"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ЗДАТИ ТЕСТ"/>
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:paddingTop="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
