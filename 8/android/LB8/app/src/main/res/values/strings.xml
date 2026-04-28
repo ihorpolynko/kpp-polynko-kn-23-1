@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LB8</string>
+    <string name="btn_equal">=</string>
+    <string name="btn_clear">C</string>
+
+    <string name="guess_prompt">Enter your guess (1–100):</string>
+    <string name="submit_guess">Submit</string>
+    <string name="too_low">Too low!</string>
+    <string name="too_high">Too high!</string>
+    <string name="correct">Correct!</string>
+</resources>
